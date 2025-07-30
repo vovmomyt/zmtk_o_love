@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор чата</title>
+    <style>
+        body { font-family: sans-serif; background: #f8f8f8; margin: 0; padding: 2em; }
+        h1 { font-size: 2em; margin-bottom: 1em; }
+        .folders { display: flex; flex-direction: column; gap: 1em; max-width: 400px; margin: 0 auto; }
+        .folder-btn {
+            display: block;
+            padding: 1em 2em;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 8px #0001;
+            transition: box-shadow 0.2s, border 0.2s;
+            text-align: center;
+        }
+        .folder-btn:hover {
+            border: 1px solid #aaa;
+            box-shadow: 0 4px 16px #0002;
+        }
+        .back-btn {
+            margin-top: 2em;
+            background: #eee;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выберите чат</h1>
+    <div class="folders">
+        <a class="folder-btn" href="/31.07.2025/zametki_o_lubvi_channel/messages.html">Канал</a>
+        <a class="folder-btn" href="/31.07.2025/zametki_o_lubvi_chat/messages.html">ЧАТ(комментарии)</a>
+        <a class="folder-btn back-btn" href="/">⟵ Назад</a>
+    </div>
+</body>
+</html>

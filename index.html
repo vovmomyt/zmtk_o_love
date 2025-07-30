@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выберите дату</title>
+    <style>
+        body { font-family: sans-serif; background: #f8f8f8; margin: 0; padding: 2em; }
+        h1 { font-size: 2em; margin-bottom: 1em; }
+        .folders { display: flex; flex-wrap: wrap; gap: 1em; }
+        .folder-btn {
+            display: inline-block;
+            padding: 1em 2em;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 8px #0001;
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .folder-btn:hover {
+            border: 1px solid #aaa;
+            box-shadow: 0 4px 16px #0002;
+        }
+    </style>
+</head>
+<body>
+    <h1>Выберите дату</h1>
+    <div class="folders" id="folders"></div>
+    <script>
+        // Список папок будет задаваться вручную, т.к. браузер не может сканировать файловую систему без сервера
+        // Получаем список папок через fetch к серверу или задаем вручную:
+        const folders = [
+            '31.07.2025',
+        ];
+
+        const container = document.getElementById('folders');
+        folders.forEach(folder => {
+            const btn = document.createElement('a');
+            btn.className = 'folder-btn';
+            btn.href = `/${folder}/`;
+            btn.textContent = folder;
+            container.appendChild(btn);
+        });
+    </script>
+</body>
+</html>
